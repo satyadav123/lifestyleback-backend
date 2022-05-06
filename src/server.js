@@ -1,8 +1,8 @@
 const app = require("./index");
-
+require("dotenv").config()
 //importing connect
 const connect = require("./configs/db");
-const port = Process.env.PORT || 3000
+const port = process.env.PORT || 3000
 app.listen(port, async function () {
 	try {
 		await connect();
